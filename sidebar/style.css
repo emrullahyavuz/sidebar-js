@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.bar {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    color: coral;
+}
+
+.sidebar {
+    position: fixed;
+    width: 400px;
+    height: 100%;
+    background-color: coral;
+    transition: all 0.5s ease-in-out;
+    transform: translate(-100%);
+}
+
+.sidebar.active {
+    transform: translate(0);
+    
+}
+
+.sidebar .closeIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar ul {
+    padding: 20px;
+    list-style-type: none;
+    font-size: 30px;
+    margin-top: 40px;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+    transition: all 0.4s ease-in-out;
+}
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+}
+.sidebar ul li a:hover {
+   
+    color:chartreuse;
+}
+
+.sidebar ul li:hover {
+   
+    scale: 1.1;
+    transform: translate(50px);
+   
+}
+
+@media screen and (max-width:500px) {
+    .sidebar.active {
+        width: 100%;
+    }
+    
+    
+}
